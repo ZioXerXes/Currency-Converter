@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
-import Converter from './Converter.js';
-import LiveRates from './LiveRates.js';
 
 const Navbar = () => {
   return (
@@ -28,12 +26,40 @@ const Navbar = () => {
   );
 }
 
-const Template = () => {
+const Footer = () => {
   return (
-    <React.Fragment>
-      <Navbar />
-    </React.Fragment>
+    <div className="mt-5">
+      <p>App created by John Paul Schmidt using React.js, Bootstrap, JavaScript, CSS, and HTML</p>
+      <div>
+      <button>
+          <a href="https://johnpaulschmidt.netlify.app/" target="#">
+            <div>
+              <h2><i></i></h2>
+              <p>My Website</p>
+            </div>
+          </a>
+        </button>
+        <button>
+          <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#">
+            <div>
+              <h2><i></i></h2>
+              <p>LinkedIn</p>
+            </div>
+          </a>
+        </button>
+      </div>
+      <div>
+        <button>
+          <a href="https://www.github.com/ZioXerXes" target="#">
+            <div>
+              <h2><i></i></h2>
+              <p>GitHub</p>
+            </div>
+          </a>
+        </button>
+      </div>
+    </div>
   )
 }
 
-export default Template;
+export { Navbar, Footer };

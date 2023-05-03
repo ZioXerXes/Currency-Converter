@@ -10,7 +10,10 @@ const Converter = () => {
           </select>
         </div>
         <div className="col-6">
-          <input placeholder="Amount1"></input>
+          <div className="row">
+            <input placeholder="Amount1" className="col-12"></input>
+            <button className="col-12">Switcheroo</button>
+          </div>
         </div>
       </div>
       <div className="row">
@@ -21,7 +24,9 @@ const Converter = () => {
           </select>
         </div>
         <div className="col-6">
-          <input placeholder="Amount2"></input>
+          <div className="row">
+            <input placeholder="Amount2" className="col-12"></input>
+          </div>
         </div>
       </div>
     </div>
