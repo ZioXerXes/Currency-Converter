@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import Template from './Template';
 import Converter from './Converter';
@@ -7,11 +7,13 @@ import LiveRates from './LiveRates';
 
 function App() {
   return (
-    <Router>
-      <Template>
-
-      </Template>
-    </Router>
+      <BrowserRouter>
+      <Template />
+      <Routes>
+        <Route path="/" exact element={<Converter />} />
+        <Route path="/live-rates/" element={<LiveRates />} />
+      </Routes>
+      </BrowserRouter>
   );
 }
 
