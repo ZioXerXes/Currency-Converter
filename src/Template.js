@@ -29,7 +29,7 @@ const Navbar = () => {
 const Footer = () => {
   return (
     <div className="mt-5">
-      <p>App created by John Paul Schmidt using React.js, Bootstrap, JavaScript, CSS, and HTML</p>
+      <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
       <div>
       <button>
           <a href="https://johnpaulschmidt.netlify.app/" target="#">
