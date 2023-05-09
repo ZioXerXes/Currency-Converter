@@ -4,6 +4,17 @@ const GetRates = () => {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         console.log(JSON.parse(httpRequest.responseText)["rates"]);
+        const ul = document.getElementById("box");
+        const ratesDraw = JSON.parse(httpRequest.responseText)["rates"];
+        console.log(typeof(ratesDraw))
+        const listNumber = Object.keys(ratesDraw).length;
+        for (var i = 0; i < listNumber; i++) {
+          const key = Object.keys(ratesDraw)[i];
+          const value = Object.values(ratesDraw)[i]
+          const li = document.createElement("li");
+          li.appendChild(document.createTextNode(key + " : " + value));
+          ul.appendChild(li);
+        }
       } else {
         console.log(httpRequest.statusText);
       }
@@ -15,7 +26,6 @@ const GetRates = () => {
   httpRequest.open('GET', 'https://api.frankfurter.app/latest?from=USD');
   httpRequest.send();
 }
-
 
 const Convert = () => {
   var httpRequest = new XMLHttpRequest();

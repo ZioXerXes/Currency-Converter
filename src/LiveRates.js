@@ -11,7 +11,7 @@ const LiveRates = () => {
           <button>Get Rates</button>
         </div>
         <div className="col-6">
-          <p></p>
+          <ul id="box"></ul>
         </div>
       </div>
     </div>
