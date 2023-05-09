@@ -5,8 +5,7 @@ const LiveRates = () => {
       <div className="row">
         <div className="col-6">
           <p>Choose your currency:</p>
-          <select>
-            <option value="Pizza">Pizza</option>
+          <select id="selector">
           </select>
           <button>Get Rates</button>
         </div>

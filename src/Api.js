@@ -27,6 +27,34 @@ const GetRates = () => {
   httpRequest.send();
 }
 
+const GetCurrencies = () => {
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onload = function() {
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        console.log(JSON.parse(httpRequest.responseText));
+        const ul = document.getElementById("selector");
+        const ratesDraw = JSON.parse(httpRequest.responseText);
+        const listNumber = Object.keys(ratesDraw).length;
+        for (var i = 0; i < listNumber; i++) {
+          const key = Object.keys(ratesDraw)[i];
+          const value = Object.values(ratesDraw)[i]
+          const li = document.createElement("option");
+          li.appendChild(document.createTextNode(key + " : " + value));
+          ul.appendChild(li);
+        }
+      } else {
+        console.log(httpRequest.statusText);
+      }
+    }
+  }
+  httpRequest.onerror = function() {
+    console.log(httpRequest.statusText);
+  }
+  httpRequest.open('GET', 'https://api.frankfurter.app/currencies');
+  httpRequest.send();
+}
+
 const Convert = () => {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onload = function() {
@@ -45,4 +73,4 @@ const Convert = () => {
   httpRequest.send();
 }
 
-export { GetRates, Convert };
+export { GetRates, GetCurrencies, Convert };
