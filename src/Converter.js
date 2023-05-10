@@ -1,12 +1,14 @@
+import { GetCurrencies } from "./Api";
+
 const Converter = () => {
+  GetCurrencies();
   return (
     <div className="container">
       <h1>Converter</h1>
       <div className="row">
         <div className="col-6">
           <p>Convert From...</p>
-          <select name="currency1">
-            <option value="pizza">Pizza</option>
+          <select id="selector1">
           </select>
         </div>
         <div className="col-6">
@@ -19,8 +21,7 @@ const Converter = () => {
       <div className="row">
         <div className="col-6">
           <p>to...</p>
-          <select name="currency2">
-            <option value="pizza">Pizza</option>
+          <select id="selector2">
           </select>
         </div>
         <div className="col-6">
