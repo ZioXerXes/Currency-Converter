@@ -3,22 +3,12 @@ const GetRates = () => {
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        console.log(JSON.parse(httpRequest.responseText)["rates"]);
-        const ul = document.getElementById("box");
-        const ratesDraw = JSON.parse(httpRequest.responseText)["rates"];
-        const listNumber = Object.keys(ratesDraw).length;
-        for (var i = 0; i < listNumber; i++) {
-          const key = Object.keys(ratesDraw)[i];
-          const value = Object.values(ratesDraw)[i]
-          const li = document.createElement("li");
-          li.appendChild(document.createTextNode(key + " : " + value));
-          ul.appendChild(li);
+        console.log(httpRequest.responseText)
         }
       } else {
         console.log(httpRequest.statusText);
       }
     }
-  }
   httpRequest.onerror = function() {
     console.log(httpRequest.statusText);
   }
@@ -31,17 +21,16 @@ const GetCurrencies = () => {
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        console.log(JSON.parse(httpRequest.responseText));
+        //console.log(JSON.parse(httpRequest.responseText));
         const ul = document.querySelectorAll("#selector1, #selector2, #selector3");
-        console.log(ul);
         const ratesDraw = JSON.parse(httpRequest.responseText);
         const listNumber = Object.keys(ratesDraw).length;
         for (var j = 0; j < ul.length; j++) {
           for (var i = 0; i < listNumber; i++) {
             const key = Object.keys(ratesDraw)[i];
-            const value = Object.values(ratesDraw)[i]
+            /*const value = Object.values(ratesDraw)[i]*/
             const li = document.createElement("option");
-            li.appendChild(document.createTextNode(key + " : " + value));
+            li.appendChild(document.createTextNode(key));
             ul[j].appendChild(li);
           }
         }
@@ -57,12 +46,14 @@ const GetCurrencies = () => {
   httpRequest.send();
 }
 
-const Convert = () => {
+var Convert = (choice1, choice2) => {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         console.log(httpRequest.responseText);
+        const nakedRate = JSON.parse(httpRequest.responseText);
+        console.log("nakedRate " + Object.entries(nakedRate['rates']));
       } else {
         console.log(httpRequest.statusText);
       }
@@ -71,8 +62,8 @@ const Convert = () => {
   httpRequest.onerror = function() {
     console.log(httpRequest.statusText);
   }
-  httpRequest.open('GET', 'https://api.frankfurter.app/latest?to=USD,EUR');
+  httpRequest.open('GET', 'https://api.frankfurter.app/latest?from='+choice1+'&to='+choice2+'');
   httpRequest.send();
 }
 
-export { GetRates, GetCurrencies, Convert };
+export { GetCurrencies, GetRates, Convert };
