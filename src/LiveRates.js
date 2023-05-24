@@ -5,12 +5,9 @@ const LiveRates = () => {
 
   const rateGetter = () => {
     console.log("rateGetter");
+    const money = document.querySelector('#selector3').value;
+    GetRates(money);
     const btn = document.querySelector('#btn');
-    const sb = document.querySelector('#chosenCurrency');
-    btn.onclick = (event) => {
-      event.preventDefault();
-      alert(sb.selectedIndex);
-    }
   }
 
   return (  
@@ -19,11 +16,9 @@ const LiveRates = () => {
       <div className="row">
         <div className="col-6">
           <p>Choose your currency:</p>
-          <form id="chosenCurrency">
-            <select id="selector3">
-            </select>
-            <button id="btn" onclick={rateGetter()}>Get Rates</button>
-          </form>
+          <select id="selector3">
+          </select>
+          <button id="btn" onClick={rateGetter}>Get Rates</button>
         </div>
         <div className="col-6">
           <ul id="box"></ul>
