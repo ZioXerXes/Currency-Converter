@@ -46,14 +46,17 @@ const GetCurrencies = () => {
   httpRequest.send();
 }
 
-var Convert = (choice1, choice2) => {
+var Convert = (choice1, choice2, amt1) => {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        console.log(httpRequest.responseText);
-        const nakedRate = JSON.parse(httpRequest.responseText);
-        console.log("nakedRate " + Object.entries(nakedRate['rates']));
+        //console.log(httpRequest.responseText);
+        const nakedRate = Object.values(JSON.parse(httpRequest.responseText)["rates"]);
+        //console.log("nakedRate " + Object.values(nakedRate['rates']));
+        console.log(nakedRate)
+        const amt2 = document.getElementById('Amount2');
+        amt2.setAttribute('value', amt1 * Number(nakedRate));
       } else {
         console.log(httpRequest.statusText);
       }

@@ -5,15 +5,11 @@ const Converter = () => {
   
   const handleClick = () => {
     const val1 = document.querySelector('#selector1').value;
-    console.log(val1);
+    //console.log(val1);
     const val2 = document.querySelector('#selector2').value;
-    console.log(val2);
+    //console.log(val2);
     const amt1 = document.querySelector('#Amount1').value;
-    const amt2 = document.getElementById('Amount2');
-    amt2.setAttribute('value', amt1);
-    console.log(amt1 + amt2);
-    console.log(val1 + val2);
-    Convert(val1, val2)
+    Convert(val1, val2, amt1)
   }
   
   return (
