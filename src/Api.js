@@ -3,16 +3,20 @@ const GetRates = (money) => {
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        console.log(httpRequest.responseText)
-        console.log(money);
-        const box = document.querySelector("#box");
-        const ratesDraw = JSON.parse(httpRequest.responseText);
-        const listNumber = Object.keys(ratesDraw).length;
-        for (var i = 0; i < listNumber; i++) {
-          const key = Object.keys(ratesDraw)[i];
-          const listRates = document.createElement("li");
-          listRates.appendChild(document.createTextNode(key));
-          box[i].appendChild(listRates)
+        const hole = document.getElementById("box");
+        if (hole.childNodes.length != 0) {
+          hole.innerHTML = "";
+        }
+        const moneyList = JSON.parse(httpRequest.responseText)["rates"];
+        const howLong = Object.keys(moneyList).length;
+        console.log(Object.values(moneyList));
+        console.log(moneyList.length);
+        for (var i = 0; i < howLong; i++) {
+          const key = Object.keys(moneyList)[i];
+          const value = Object.values(moneyList)[i]
+          const li = document.createElement("li");
+          li.appendChild(document.createTextNode(key + " : " + value));
+          hole.appendChild(li);
         }
         }
       } else {
@@ -38,9 +42,10 @@ const GetCurrencies = () => {
         for (var j = 0; j < ul.length; j++) {
           for (var i = 0; i < listNumber; i++) {
             const key = Object.keys(ratesDraw)[i];
+            const value = Object.values(ratesDraw)[i];
             /*const value = Object.values(ratesDraw)[i]*/
             const li = document.createElement("option");
-            li.appendChild(document.createTextNode(key));
+            li.appendChild(document.createTextNode(key + " : " + value));
             ul[j].appendChild(li);
           }
         }

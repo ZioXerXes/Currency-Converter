@@ -4,9 +4,9 @@ const Converter = () => {
   GetCurrencies();
   
   const handleClick = () => {
-    const val1 = document.querySelector('#selector1').value;
+    const val1 = document.querySelector('#selector1').value.substring(0,3);
     //console.log(val1);
-    const val2 = document.querySelector('#selector2').value;
+    const val2 = document.querySelector('#selector2').value.substring(0,3);
     //console.log(val2);
     const amt1 = document.querySelector('#Amount1').value;
     Convert(val1, val2, amt1)
