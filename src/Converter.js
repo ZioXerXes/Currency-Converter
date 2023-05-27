@@ -2,7 +2,7 @@ import { GetCurrencies, Convert } from "./Api";
 
 const Converter = () => {
   GetCurrencies();
-  
+
   const handleClick = () => {
     const val1 = document.querySelector('#selector1').value.substring(0,3);
     //console.log(val1);
@@ -11,7 +11,7 @@ const Converter = () => {
     const amt1 = document.querySelector('#Amount1').value;
     Convert(val1, val2, amt1)
   }
-  
+
   return (
     <div className="container">
       <h1>Converter</h1>
@@ -39,7 +39,7 @@ const Converter = () => {
           </form>
         </div>
         <div className="col-6">
-          <div className="row">
+          <div className="row bottom-box">
             <input placeholder="Amount2" id="Amount2" className="col-12"></input>
           </div>
         </div>
@@ -47,6 +47,8 @@ const Converter = () => {
     </div>
   )
   
+  
+
 }
 
 

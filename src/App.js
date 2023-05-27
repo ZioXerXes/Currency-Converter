@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import './App.css';
-import Template from './Template';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Footer } from './Template'
 import Converter from './Converter';
 import LiveRates from './LiveRates';

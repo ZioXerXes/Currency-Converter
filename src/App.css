@@ -1,3 +1,13 @@
 body {
   background-color: #CA9999;
 }
+
+h1, nav {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.bottom-box {
+  display: flex;
+  align-items: flex-end;
+}

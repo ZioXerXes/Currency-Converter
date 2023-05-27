@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <nav className="navbar fixed-left navbar-expand-md navbar-light">
-        <Link className="navbar-brand raleway" to="/">Currency Converter</Link> 
+        <Link className="navbar-brand raleway" to="/">   Currency Converter</Link> 
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +28,7 @@ const Navbar = () => {
 const Footer = () => {
   return (
     <div className="mt-5">
-      <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
+      <p className="pl-5">App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
       <div>
       <button>
           <a href="https://johnpaulschmidt.netlify.app/" target="#">
