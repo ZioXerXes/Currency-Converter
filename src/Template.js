@@ -27,35 +27,45 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <div className="mt-5">
-      <p className="pl-5">App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
-      <div>
-      <button>
-          <a href="https://johnpaulschmidt.netlify.app/" target="#">
-            <div>
-              <h2><i></i></h2>
-              <p>My Website</p>
+    <div id="footer" className="container fixed-bottom">
+      <div className="row">
+        <div className="col-8">
+          <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
+        </div>
+        <div className="col-4">
+          <div className="row">
+            <div className="col-4">
+              <button>
+                <a href="https://johnpaulschmidt.netlify.app/" target="#">
+                  <div>
+                    <h2><i class="bi bi-globe"></i></h2>
+                    <p>My Website</p>
+                  </div>
+                </a>
+              </button>
             </div>
-          </a>
-        </button>
-        <button>
-          <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#">
-            <div>
-              <h2><i></i></h2>
-              <p>LinkedIn</p>
+            <div className="col-4">
+              <button>
+                <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#">
+                  <div>
+                    <h2><i class="bi bi-linkedin"></i></h2>
+                    <p>LinkedIn</p>
+                  </div>
+                </a>
+              </button>
             </div>
-          </a>
-        </button>
-      </div>
-      <div>
-        <button>
-          <a href="https://www.github.com/ZioXerXes" target="#">
-            <div>
-              <h2><i></i></h2>
-              <p>GitHub</p>
+            <div className="col-4">
+              <button>
+                <a href="https://www.github.com/ZioXerXes" target="#">
+                  <div>
+                    <h2><i class="bi bi-github"></i></h2>
+                    <p>GitHub</p>
+                  </div>
+                </a>
+              </button>
             </div>
-          </a>
-        </button>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ const Converter = () => {
   return (
     <div className="container">
       <h1>Converter</h1>
+
       <div className="row">
         <div className="col-6">
           <p>Convert From...</p>
@@ -23,25 +24,25 @@ const Converter = () => {
             </select>
           </form>
         </div>
-        <div className="col-6">
-          <div className="row">
-            <input placeholder="Amount1" id="Amount1" className="col-12"></input>
-            <button className="col-12" id="switcheroo" onClick={handleClick}>Switcheroo</button>
-          </div>
+        <div className="col-6 bottom-box">
+            <input placeholder="Amount1" id="Amount1"></input>
         </div>
+
       </div>
+      <div className="row my-3">
+        <p className="col-6 mb-0">to...</p>
+        <button className="col-6" id="switcheroo" onClick={handleClick}>Convert</button>
+      </div>
+
       <div className="row">
-        <div className="col-6">
-          <p>to...</p>
+        <div className="col-6 bottom-box">
           <form id="currency2">
             <select id="selector2">
             </select>
           </form>
         </div>
-        <div className="col-6">
-          <div className="row bottom-box">
-            <input placeholder="Amount2" id="Amount2" className="col-12"></input>
-          </div>
+        <div className="col-6 bottom-box">
+            <input placeholder="Amount2" id="Amount2"></input>
         </div>
       </div>
     </div>
