@@ -33,13 +33,12 @@ const Footer = () => {
           <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
         </div>
         <div className="col-4">
-          <div className="row">
+          <div className="row mb-2">
             <div className="col-4">
-              <button>
-                <a href="https://johnpaulschmidt.netlify.app/" target="#">
+              <button className="social-button">
+                <a href="https://johnpaulschmidt.netlify.app/" target="#" className="social-link">
                   <div>
-                    <h2><i class="bi bi-globe"></i></h2>
-                    <p>My Website</p>
+                    <i className="bi bi-globe"></i>
                   </div>
                 </a>
               </button>
@@ -48,8 +47,7 @@ const Footer = () => {
               <button>
                 <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#">
                   <div>
-                    <h2><i class="bi bi-linkedin"></i></h2>
-                    <p>LinkedIn</p>
+                    <i className="bi bi-linkedin"></i>
                   </div>
                 </a>
               </button>
@@ -58,8 +56,7 @@ const Footer = () => {
               <button>
                 <a href="https://www.github.com/ZioXerXes" target="#">
                   <div>
-                    <h2><i class="bi bi-github"></i></h2>
-                    <p>GitHub</p>
+                    <FontAwesomeIcon icon="fa-brands fa-github" flip />                  
                   </div>
                 </a>
               </button>

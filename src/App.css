@@ -7,7 +7,23 @@ h1, nav {
   font-weight: bold;
 }
 
+.bi {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .bottom-box {
   display: flex;
   align-items: flex-end;
+}
+
+.social-button {
+  border-radius: 12px;
+  height: 200%;
+  width: 100%;
+}
+
+.social-link {
+  text-decoration: none;
 }
