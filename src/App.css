@@ -19,11 +19,18 @@ h1, nav {
 }
 
 .social-button {
-  border-radius: 12px;
-  height: 200%;
-  width: 100%;
+  border-radius: 50%;
+  background-color: #CA9999;
+}
+
+.social-button:hover {
+  -webkit-animation: fa-flip 2s infinite linear;
+  -moz-animation: fa-flip 2s infinite linear;
+  -o-animation: fa-flip 2s infinite linear;
+  animation: fa-flip 2s infinite linear;
 }
 
 .social-link {
   text-decoration: none;
+  color: rgb(9, 7, 7);
 }

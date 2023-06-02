@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
   return (
@@ -38,25 +42,25 @@ const Footer = () => {
               <button className="social-button">
                 <a href="https://johnpaulschmidt.netlify.app/" target="#" className="social-link">
                   <div>
-                    <i className="bi bi-globe"></i>
+                    <FontAwesomeIcon icon={faGlobe} />
                   </div>
                 </a>
               </button>
             </div>
             <div className="col-4">
-              <button>
+              <button className="social-button">
                 <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#">
                   <div>
-                    <i className="bi bi-linkedin"></i>
+                    <FontAwesomeIcon icon={faLinkedin}/>
                   </div>
                 </a>
               </button>
             </div>
             <div className="col-4">
-              <button>
+              <button className="social-button">
                 <a href="https://www.github.com/ZioXerXes" target="#">
                   <div>
-                    <FontAwesomeIcon icon="fa-brands fa-github" flip />                  
+                  <FontAwesomeIcon icon={faGithub} />
                   </div>
                 </a>
               </button>
