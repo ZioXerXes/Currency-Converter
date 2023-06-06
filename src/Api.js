@@ -4,19 +4,28 @@ const GetRates = (money) => {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         const hole = document.getElementById("box");
+        const hole2 = document.getElementById("box2");
         if (hole.childNodes.length != 0) {
           hole.innerHTML = "";
+          hole2.innerHTML = "";
         }
         const moneyList = JSON.parse(httpRequest.responseText)["rates"];
         const howLong = Object.keys(moneyList).length;
         console.log(Object.values(moneyList));
         console.log(moneyList.length);
-        for (var i = 0; i < howLong; i++) {
+        for (var i = 0; i < howLong/2; i++) {
           const key = Object.keys(moneyList)[i];
           const value = Object.values(moneyList)[i]
           const li = document.createElement("li");
           li.appendChild(document.createTextNode(key + " : " + value));
           hole.appendChild(li);
+        }
+        for (var i = howLong/2; i < howLong; i++) {
+          const key = Object.keys(moneyList)[i];
+          const value = Object.values(moneyList)[i]
+          const li = document.createElement("li");
+          li.appendChild(document.createTextNode(key + " : " + value));
+          hole2.appendChild(li);
         }
         }
       } else {

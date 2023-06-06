@@ -11,17 +11,20 @@ const LiveRates = () => {
   }
 
   return (  
-    <div className="container">
+    <div className="container mt-3">
       <h1>Live Rates</h1>
-      <div className="row">
-        <div className="col-6">
+      <div className="row mt-3">
+        <div className="col-6 mt-3">
           <p>Choose your currency:</p>
           <select id="selector3">
           </select>
-          <button id="btn" onClick={rateGetter}>Get Rates</button>
+          <button id="btn" className="button-45 mt-2" onClick={rateGetter}>Get Rates</button>
         </div>
-        <div className="col-6">
+        <div className="col-3">
           <ul id="box"></ul>
+        </div>
+        <div className="col-3">
+          <ul id="box2"></ul>
         </div>
       </div>
     </div>
