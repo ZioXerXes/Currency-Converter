@@ -6,8 +6,10 @@ const LiveRates = () => {
   const rateGetter = () => {
     console.log("rateGetter");
     const money = document.querySelector('#selector3').value.substring(0,3);
+    console.log(money);
     GetRates(money);
     const btn = document.querySelector('#btn');
+    btn.innerHTML = "Get rates for 1 " + money;
   }
 
   return (  

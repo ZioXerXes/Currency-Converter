@@ -31,43 +31,37 @@ const Navbar = () => {
   );
 }
 
+/*fixed-bottom d-flex align-items-center justify-content-end*/
+
 const Footer = () => {
   return (
     <div id="footer" className="container fixed-bottom d-flex align-items-center justify-content-end">
       <div className="row">
-        <div className="col-10 bio">
+        <div className="col-7 bio">
           <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
         </div>
-        <div className="col-2">
-          <div className="row mb-2">
-            <div className="col-4">
-              <button className="social-button">
-                <a href="https://johnpaulschmidt.netlify.app/" target="#" className="social-link">
-                  <div>
-                    <FontAwesomeIcon icon={faGlobe} />
-                  </div>
-                </a>
-              </button>
-            </div>
-            <div className="col-4">
-              <button className="social-button">
-                <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#" className="social-link">
-                  <div>
-                    <FontAwesomeIcon icon={faLinkedin}/>
-                  </div>
-                </a>
-              </button>
-            </div>
-            <div className="col-4">
-              <button className="social-button">
-                <a href="https://www.github.com/ZioXerXes" target="#" className="social-link">
-                  <div>
-                  <FontAwesomeIcon icon={faGithub} />
-                  </div>
-                </a>
-              </button>
-            </div>
-          </div>
+        <div className="col-5">
+          <button className="social-button">
+            <a href="https://johnpaulschmidt.netlify.app/" target="#" className="social-link">
+              <div>
+                <FontAwesomeIcon icon={faGlobe} />
+              </div>
+            </a>
+          </button>
+          <button className="social-button">
+            <a href="https://www.linkedin.com/in/john-paul-schmidt-b1306941" target="#" className="social-link">
+              <div>
+                <FontAwesomeIcon icon={faLinkedin}/>
+              </div>
+            </a>
+          </button>
+          <button className="social-button">
+            <a href="https://www.github.com/ZioXerXes" target="#" className="social-link">
+              <div>
+              <FontAwesomeIcon icon={faGithub} />
+              </div>
+            </a>
+          </button>
         </div>
       </div>
     </div>

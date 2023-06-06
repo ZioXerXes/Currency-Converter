@@ -14,34 +14,33 @@ const Converter = () => {
 
   return (
     <div className="container mt-3">
-      <h1>Converter</h1>
-
+      <h1 className="text-center">Converter</h1>
       <div className="row mt-3">
-        <div className="col-6 mt-3">
-          <p>Convert From...</p>
-          <form id="currency1">
+        <div className="dad-box col-md-6 col-sm-12 mt-3">
+          <p className="d-none d-sm-block col-sm-6 mb-0">Convert From...</p>
+          <form id="currency1" className="col-md-6 col-sm-12">
             <select id="selector1">
             </select>
           </form>
         </div>
-        <div className="col-6 bottom-box p-0">
+        <div className="dad-box amount-box col-md-6 col-sm-12 bottom-box mt-1">
             <input placeholder="Amount1" id="Amount1"></input>
         </div>
       </div>
 
-      <div className="row my-4">
-        <p className="col-6 mb-0">to...</p>
+      <div className="dad-box row my-4">
+        <p className="d-none d-sm-block col-sm-6 mb-0">to...</p>
         <button className="col-3 button-45" id="switcheroo" onClick={handleClick}>Convert</button>
       </div>
 
       <div className="row">
-        <div className="col-6 bottom-box">
+        <div className="dad-box col-md-6 col-sm-12 bottom-box">
           <form id="currency2">
             <select id="selector2">
             </select>
           </form>
         </div>
-        <div className="col-6 bottom-box p-0">
+        <div className="dad-box amount-box col-md-6 col-sm-12 bottom-box mt-1">
             <input placeholder="Amount2" id="Amount2" readOnly="readonly"></input>
         </div>
       </div>
