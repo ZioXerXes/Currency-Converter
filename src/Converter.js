@@ -10,14 +10,18 @@ const Converter = () => {
     Convert(val1, val2, amt1)
   }
 
+  const swapEm = () => {
+    const curr1 = document.querySelector('#selector1').selectedIndex;
+    const curr2 = document.querySelector('#selector2').selectedIndex;
+    document.getElementById('selector2').selectedIndex = curr1;
+    document.getElementById('selector1').selectedIndex = curr2;
+    handleClick();
+  }
+
   return (
     <div className="container mt-3">
       <h1 className="text-center">Converter</h1>
-      <div className="row mt-3">
-        <div className="dad-box col-6 mt-3 mb-3">
-          <p className="d-none d-sm-block mb-0">Convert From...</p>
-        </div>
-        <div className="col-6"></div>
+      <div className="row mt-5">
         <div className="dad-box col-xs-12 col-md-6">
           <form id="currency1">
             <select id="selector1">
@@ -30,11 +34,11 @@ const Converter = () => {
       </div>
 
       <div className="row my-4">
-        <div className="dad-box align-bottom col-6 mb-0">
-          <p className="mb-0 disappear">to...</p>
+        <div className="button-left d-flex align-bottom col-6 mb-0">
+          <button className="button-45" onClick={swapEm}><i className="bi bi-arrow-up"></i>Swap<i className="bi bi-arrow-down"></i></button>
         </div>
-        <div className="dad-box col-xs-12 col-md-6">
-          <button className="button-45" id="switcheroo" onClick={handleClick}>Convert</button>
+        <div className="button-right col-6">
+          <button className="button-45" id="switcheroo" onClick={handleClick}>Convert</button>          
         </div>
       </div>
 

@@ -1,4 +1,12 @@
 @media all and (min-width: 0) {
+  .button-right {
+    justify-content: flex-start;
+  }
+
+  .button-left {
+    justify-content: flex-end;
+  }
+
   .dad-box {
     display: flex;
     justify-content: center;
@@ -38,6 +46,16 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .button-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  }
+
+  .button-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  }
 
   #message, .disappear {
     display: block;
