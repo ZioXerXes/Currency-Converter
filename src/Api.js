@@ -11,8 +11,6 @@ const GetRates = (money) => {
         }
         const moneyList = JSON.parse(httpRequest.responseText)["rates"];
         const howLong = Object.keys(moneyList).length;
-        console.log(Object.values(moneyList));
-        console.log(moneyList.length);
         for (var i = 0; i < howLong/2; i++) {
           const key = Object.keys(moneyList)[i];
           const value = Object.values(moneyList)[i]
@@ -44,7 +42,6 @@ const GetCurrencies = () => {
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        //console.log(JSON.parse(httpRequest.responseText));
         const ul = document.querySelectorAll("#selector1, #selector2, #selector3");
         const ratesDraw = JSON.parse(httpRequest.responseText);
         const listNumber = Object.keys(ratesDraw).length;
@@ -52,7 +49,6 @@ const GetCurrencies = () => {
           for (var i = 0; i < listNumber; i++) {
             const key = Object.keys(ratesDraw)[i];
             const value = Object.values(ratesDraw)[i];
-            /*const value = Object.values(ratesDraw)[i]*/
             const li = document.createElement("option");
             li.appendChild(document.createTextNode(key + " : " + value));
             ul[j].appendChild(li);
@@ -75,10 +71,7 @@ var Convert = (choice1, choice2, amt1) => {
   httpRequest.onload = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        //console.log(httpRequest.responseText);
         const nakedRate = Object.values(JSON.parse(httpRequest.responseText)["rates"]);
-        //console.log("nakedRate " + Object.values(nakedRate['rates']));
-        console.log(nakedRate)
         const amt2 = document.getElementById('Amount2');
         amt2.setAttribute('value', amt1 * Number(nakedRate));
       } else {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -31,8 +30,6 @@ const Navbar = () => {
   );
 }
 
-/*fixed-bottom d-flex align-items-center justify-content-end*/
-
 const Footer = () => {
   return (
     <div id="footer" className="container fixed-bottom d-flex align-items-center justify-content-end">
@@ -40,7 +37,7 @@ const Footer = () => {
         <div className="col-7 bio">
           <p>App created by John Paul Schmidt using React.js, API, Bootstrap, JavaScript, CSS, and HTML</p>
         </div>
-        <div className="col-5">
+        <div className="col-5 justify-contents-center">
           <button className="social-button">
             <a href="https://johnpaulschmidt.netlify.app/" target="#" className="social-link">
               <div>

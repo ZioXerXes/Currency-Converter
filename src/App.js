@@ -1,9 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navbar, Footer } from './Template'
 import Converter from './Converter';
 import LiveRates from './LiveRates';
